@@ -1,11 +1,11 @@
 function checkSID() {
-  let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
-    return true;
-  } else {
-    return false;
+	let sid = document.getElementById("sid").value.trim();
+	if (sid.length !== 10 || isNaN(sid)) {
+	  return false;
+	}
+	return true;
   }
-}
+
 
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();
